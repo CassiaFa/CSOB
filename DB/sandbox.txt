@@ -1,0 +1,5 @@
+Calendrier (_id_calendrier_)
+Consoles (_id_console_, nom_console)
+Jeux (_id_jeu_, nom_jeu, NA_vente_jeu, EU_vente_jeu, JP_vente_jeu, Autre_vente_jeu, Global_vente_jeu, #id_calendrier, #id_console, #id_genre, #id_editeur)
+Genres (_id_genre_, nom_genre)
+Editeurs (_id_editeur_, nom_editeur)
