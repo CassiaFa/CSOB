@@ -20,10 +20,10 @@ CREATE TABLE `JEUX` (
   `jp_vente_jeu` FLOAT,
   `autre_vente_jeu` FLOAT,
   `global_vente_jeu` FLOAT,
-  `id_calendrier` DATE NOT NULL,
+  `id_calendrier` DATE,
   `id_console` INT NOT NULL,
   `id_genre` INT NOT NULL,
-  `id_editeur` INT NOT NULL,
+  `id_editeur` INT,
   PRIMARY KEY (`id_jeu`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -39,7 +39,7 @@ CREATE TABLE `EDITEURS` (
   PRIMARY KEY (`id_editeur`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- ALTER TABLE `JEUX` ADD FOREIGN KEY (`id_editeur`) REFERENCES `EDITEURS` (`id_editeur`);
--- ALTER TABLE `JEUX` ADD FOREIGN KEY (`id_genre`) REFERENCES `GENRES` (`id_genre`);
--- ALTER TABLE `JEUX` ADD FOREIGN KEY (`id_console`) REFERENCES `CONSOLES` (`id_console`);
--- ALTER TABLE `JEUX` ADD FOREIGN KEY (`id_calendrier`) REFERENCES `CALENDRIER` (`id_calendrier`);
+ALTER TABLE `JEUX` ADD FOREIGN KEY (`id_editeur`) REFERENCES `EDITEURS` (`id_editeur`);
+ALTER TABLE `JEUX` ADD FOREIGN KEY (`id_genre`) REFERENCES `GENRES` (`id_genre`);
+ALTER TABLE `JEUX` ADD FOREIGN KEY (`id_console`) REFERENCES `CONSOLES` (`id_console`);
+ALTER TABLE `JEUX` ADD FOREIGN KEY (`id_calendrier`) REFERENCES `CALENDRIER` (`id_calendrier`);
