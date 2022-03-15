@@ -1,0 +1,55 @@
+<html>
+<head>
+<meta charset='utf-8'>
+<style>
+  #mld .relation { font-variant: small-caps; font-weight: bold }
+  #mld .primary { text-decoration: underline }
+  #mld .foreign { font-style: oblique }
+  #mld .normal { }
+</style>
+</head>
+<body>
+<div id='mld'>
+<!--
+<div>
+  <span class='relation'>Calendrier</span> (
+    <span class='primary'>id_calendrier</span>
+  )
+</div>
+-->
+<div>
+  <span class='relation'>Consoles</span> (
+    <span class='primary'>id_console</span>,
+    <span class='normal'>nom_console</span>
+  )
+</div>
+<div>
+  <span class='relation'>Jeux</span> (
+    <span class='primary'>id_jeu</span>,
+    <span class='normal'>nom_jeu</span>,
+    <span class='normal'>NA_vente_jeu</span>,
+    <span class='normal'>EU_vente_jeu</span>,
+    <span class='normal'>JP_vente_jeu</span>,
+    <span class='normal'>Autre_vente_jeu</span>,
+    <span class='normal'>Global_vente_jeu</span>,
+    <span class='foreign'>id_calendrier</span>,
+    <span class='foreign'>id_console</span>,
+    <span class='foreign'>id_genre</span>,
+    <span class='foreign'>id_editeur</span>
+  )
+</div>
+<div>
+  <span class='relation'>Genres</span> (
+    <span class='primary'>id_genre</span>,
+    <span class='normal'>nom_genre</span>
+  )
+</div>
+<div>
+  <span class='relation'>Editeurs</span> (
+    <span class='primary'>id_editeur</span>,
+    <span class='normal'>nom_editeur</span>
+  )
+</div>
+</div>
+</body>
+</html>

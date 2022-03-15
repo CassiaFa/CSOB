@@ -1,0 +1,136 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="620" height="528" view_box="0 0 620 528"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.9 le Tue, 15 Mar 2022 14:46:34</desc>
+
+<rect id="frame" x="0" y="0" width="620" height="528" fill="none" stroke="none" stroke-width="0"/>
+
+<!-- Association Paru -->
+<line x1="335" y1="39" x2="335" y2="122" stroke="#726f83" stroke-width="1"/>
+<text x="340.0" y="85" fill="#726f83" font-family="Futura" font-size="11">1,N</text>
+<line x1="335" y1="256" x2="335" y2="122" stroke="#726f83" stroke-width="1"/>
+<text x="340.0" y="167" fill="#726f83" font-family="Futura" font-size="11">1,1</text>
+<g id="association-Paru">
+	<path d="M 351 93 a 14 14 90 0 1 14 14 V 121 h -60 V 107 a 14 14 90 0 1 14 -14" fill="#b2bba4" stroke="#b2bba4" stroke-width="0"/>
+	<path d="M 365 121.0 v 16 a 14 14 90 0 1 -14 14 H 319 a 14 14 90 0 1 -14 -14 V 121.0 H 60" fill="#ccd6ba" stroke="#ccd6ba" stroke-width="0"/>
+	<rect x="305" y="93" width="60" height="58" fill="none" rx="14" stroke="#85956b" stroke-width="1.5"/>
+	<line x1="305" y1="121" x2="365" y2="121" stroke="#85956b" stroke-width="1.5"/>
+	<text x="312" y="114.3" fill="#27360c" font-family="Copperplate" font-size="18">Paru</text>
+</g>
+
+<!-- Association Executer -->
+<line x1="61" y1="256" x2="192" y2="256" stroke="#726f83" stroke-width="1"/>
+<text x="118" y="272.0" fill="#726f83" font-family="Futura" font-size="11">1,N</text>
+<line x1="335" y1="256" x2="192" y2="256" stroke="#726f83" stroke-width="1"/>
+<text x="248" y="272.0" fill="#726f83" font-family="Futura" font-size="11">1,1</text>
+<g id="association-Executer">
+	<path d="M 228 227 a 14 14 90 0 1 14 14 V 255 h -100 V 241 a 14 14 90 0 1 14 -14" fill="#b2bba4" stroke="#b2bba4" stroke-width="0"/>
+	<path d="M 242 255.0 v 16 a 14 14 90 0 1 -14 14 H 156 a 14 14 90 0 1 -14 -14 V 255.0 H 100" fill="#ccd6ba" stroke="#ccd6ba" stroke-width="0"/>
+	<rect x="142" y="227" width="100" height="58" fill="none" rx="14" stroke="#85956b" stroke-width="1.5"/>
+	<line x1="142" y1="255" x2="242" y2="255" stroke="#85956b" stroke-width="1.5"/>
+	<text x="149" y="248.3" fill="#27360c" font-family="Copperplate" font-size="18">Executer</text>
+</g>
+
+<!-- Association Avoir -->
+<line x1="335" y1="256" x2="461" y2="256" stroke="#726f83" stroke-width="1"/>
+<text x="404" y="272.0" fill="#726f83" font-family="Futura" font-size="11">1,1</text>
+<line x1="567" y1="256" x2="461" y2="256" stroke="#726f83" stroke-width="1"/>
+<text x="499" y="272.0" fill="#726f83" font-family="Futura" font-size="11">1,N</text>
+<g id="association-Avoir">
+	<path d="M 480 227 a 14 14 90 0 1 14 14 V 255 h -66 V 241 a 14 14 90 0 1 14 -14" fill="#b2bba4" stroke="#b2bba4" stroke-width="0"/>
+	<path d="M 494 255.0 v 16 a 14 14 90 0 1 -14 14 H 442 a 14 14 90 0 1 -14 -14 V 255.0 H 66" fill="#ccd6ba" stroke="#ccd6ba" stroke-width="0"/>
+	<rect x="428" y="227" width="66" height="58" fill="none" rx="14" stroke="#85956b" stroke-width="1.5"/>
+	<line x1="428" y1="255" x2="494" y2="255" stroke="#85956b" stroke-width="1.5"/>
+	<text x="435" y="248.3" fill="#27360c" font-family="Copperplate" font-size="18">Avoir</text>
+</g>
+
+<!-- Association Publier -->
+<line x1="335" y1="256" x2="335" y2="390" stroke="#726f83" stroke-width="1"/>
+<text x="340.0" y="353" fill="#726f83" font-family="Futura" font-size="11">1,1</text>
+<line x1="335" y1="481" x2="335" y2="390" stroke="#726f83" stroke-width="1"/>
+<text x="340.0" y="435" fill="#726f83" font-family="Futura" font-size="11">1,N</text>
+<g id="association-Publier">
+	<path d="M 365 361 a 14 14 90 0 1 14 14 V 389 h -88 V 375 a 14 14 90 0 1 14 -14" fill="#b2bba4" stroke="#b2bba4" stroke-width="0"/>
+	<path d="M 379 389.0 v 16 a 14 14 90 0 1 -14 14 H 305 a 14 14 90 0 1 -14 -14 V 389.0 H 88" fill="#ccd6ba" stroke="#ccd6ba" stroke-width="0"/>
+	<rect x="291" y="361" width="88" height="58" fill="none" rx="14" stroke="#85956b" stroke-width="1.5"/>
+	<line x1="291" y1="389" x2="379" y2="389" stroke="#85956b" stroke-width="1.5"/>
+	<text x="298" y="382.3" fill="#27360c" font-family="Copperplate" font-size="18">Publier</text>
+</g>
+
+<!-- Entity Calendrier -->
+<g id="entity-Calendrier">
+	<g id="frame-Calendrier">
+		<rect x="274" y="9" width="122" height="30" fill="#97b8ff" stroke="#97b8ff" stroke-width="0"/>
+		<rect x="274" y="39.0" width="122" height="30" fill="#c0d4ff" stroke="#c0d4ff" stroke-width="0"/>
+		<rect x="274" y="9" width="122" height="60" fill="none" stroke="#578dff" stroke-width="1.5"/>
+		<line x1="274" y1="39" x2="396" y2="39" stroke="#578dff" stroke-width="1.5"/>
+	</g>
+	<text x="282" y="30.3" fill="#131114" font-family="Copperplate" font-size="18">Calendrier</text>
+	<text x="282" y="56.1" fill="#3e3c42" font-family="Gill Sans" font-size="15">id_calendrier</text>
+	<line x1="282" y1="59" x2="365" y2="59" stroke="#3e3c42" stroke-width="1"/>
+</g>
+
+<!-- Entity Consoles -->
+<g id="entity-Consoles">
+	<g id="frame-Consoles">
+		<rect x="9" y="218" width="104" height="30" fill="#97b8ff" stroke="#97b8ff" stroke-width="0"/>
+		<rect x="9" y="248.0" width="104" height="46" fill="#c0d4ff" stroke="#c0d4ff" stroke-width="0"/>
+		<rect x="9" y="218" width="104" height="76" fill="none" stroke="#578dff" stroke-width="1.5"/>
+		<line x1="9" y1="248" x2="113" y2="248" stroke="#578dff" stroke-width="1.5"/>
+	</g>
+	<text x="17" y="239.3" fill="#131114" font-family="Copperplate" font-size="18">Consoles</text>
+	<text x="17" y="265.1" fill="#3e3c42" font-family="Gill Sans" font-size="15">id_console</text>
+	<line x1="17" y1="268" x2="85" y2="268" stroke="#3e3c42" stroke-width="1"/>
+	<text x="17" y="282.1" fill="#3e3c42" font-family="Gill Sans" font-size="15">nom_console</text>
+</g>
+
+<!-- Entity Jeux -->
+<g id="entity-Jeux">
+	<g id="frame-Jeux">
+		<rect x="271" y="175" width="128" height="30" fill="#97b8ff" stroke="#97b8ff" stroke-width="0"/>
+		<rect x="271" y="205.0" width="128" height="132" fill="#c0d4ff" stroke="#c0d4ff" stroke-width="0"/>
+		<rect x="271" y="175" width="128" height="162" fill="none" stroke="#578dff" stroke-width="1.5"/>
+		<line x1="271" y1="205" x2="399" y2="205" stroke="#578dff" stroke-width="1.5"/>
+	</g>
+	<text x="314" y="196.3" fill="#131114" font-family="Copperplate" font-size="18">Jeux</text>
+	<text x="279" y="222.0" fill="#3e3c42" font-family="Gill Sans" font-size="15">id_jeu</text>
+	<line x1="279" y1="225" x2="318" y2="225" stroke="#3e3c42" stroke-width="1"/>
+	<text x="279" y="239.1" fill="#3e3c42" font-family="Gill Sans" font-size="15">nom_jeu</text>
+	<text x="279" y="256.1" fill="#3e3c42" font-family="Gill Sans" font-size="15">NA_vente_jeu</text>
+	<text x="279" y="273.1" fill="#3e3c42" font-family="Gill Sans" font-size="15">EU_vente_jeu</text>
+	<text x="279" y="290.0" fill="#3e3c42" font-family="Gill Sans" font-size="15">JP_vente_jeu</text>
+	<text x="279" y="307.0" fill="#3e3c42" font-family="Gill Sans" font-size="15">Autre_vente_jeu</text>
+	<text x="279" y="324.0" fill="#3e3c42" font-family="Gill Sans" font-size="15">Global_vente_jeu</text>
+</g>
+
+<!-- Entity Genres -->
+<g id="entity-Genres">
+	<g id="frame-Genres">
+		<rect x="523" y="218" width="88" height="30" fill="#97b8ff" stroke="#97b8ff" stroke-width="0"/>
+		<rect x="523" y="248.0" width="88" height="46" fill="#c0d4ff" stroke="#c0d4ff" stroke-width="0"/>
+		<rect x="523" y="218" width="88" height="76" fill="none" stroke="#578dff" stroke-width="1.5"/>
+		<line x1="523" y1="248" x2="611" y2="248" stroke="#578dff" stroke-width="1.5"/>
+	</g>
+	<text x="533" y="239.3" fill="#131114" font-family="Copperplate" font-size="18">Genres</text>
+	<text x="531" y="265.1" fill="#3e3c42" font-family="Gill Sans" font-size="15">id_genre</text>
+	<line x1="531" y1="268" x2="587" y2="268" stroke="#3e3c42" stroke-width="1"/>
+	<text x="531" y="282.1" fill="#3e3c42" font-family="Gill Sans" font-size="15">nom_genre</text>
+</g>
+
+<!-- Entity Editeurs -->
+<g id="entity-Editeurs">
+	<g id="frame-Editeurs">
+		<rect x="286" y="443" width="98" height="30" fill="#97b8ff" stroke="#97b8ff" stroke-width="0"/>
+		<rect x="286" y="473.0" width="98" height="46" fill="#c0d4ff" stroke="#c0d4ff" stroke-width="0"/>
+		<rect x="286" y="443" width="98" height="76" fill="none" stroke="#578dff" stroke-width="1.5"/>
+		<line x1="286" y1="473" x2="384" y2="473" stroke="#578dff" stroke-width="1.5"/>
+	</g>
+	<text x="294" y="464.3" fill="#131114" font-family="Copperplate" font-size="18">Editeurs</text>
+	<text x="294" y="490.1" fill="#3e3c42" font-family="Gill Sans" font-size="15">id_editeur</text>
+	<line x1="294" y1="493" x2="359" y2="493" stroke="#3e3c42" stroke-width="1"/>
+	<text x="294" y="507.1" fill="#3e3c42" font-family="Gill Sans" font-size="15">nom_editeur</text>
+</g>
+</svg>
