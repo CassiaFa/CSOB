@@ -5,12 +5,12 @@ class Connexion:
     __password = "root"
     __host = "localhost"
     __port = "8081"
-    __database = None
+    __database = "vente_jeux" # None
     __cursor = None
 
     @classmethod
     def creation(cls, db_name, sql_file):
-        if cls.__cursor == None:
+        if not(cls.__cursor):
             cls.__bdd = msc.connect(user = cls.__user, password = cls.__password, host = cls.__host, port = cls.__port, database = cls.__database)
             cls.__cursor = cls.__bdd.cursor()
             cls.__database = db_name
@@ -24,12 +24,16 @@ class Connexion:
                     print(f"Affected {res.rowcount} rows" )
 
                 cls.__bdd.commit()  # Remember to commit all your changes!
+                cls.fermer()
+        else:
+            print(cls.__database)
+            print()       
             
 
     @classmethod
     def ouvrir(cls):
         if cls.__cursor == None:
-            cls.__bdd = msc.connect(user = cls.__user, password = cls.__password, host = cls.__host, port = cls.__port, database = cls.__database)
+            cls.__bdd = msc.connect(user = cls.__user, password = cls.__password, host = cls.__host, port = cls.__port, database = cls.__database, allow_local_infile = True)
             cls.__cursor = cls.__bdd.cursor()
 
 
@@ -38,14 +42,22 @@ class Connexion:
         cls.__cursor.execute(query)
         if query.split(" ")[0] != "SELECT":
             cls.__bdd.commit()
-            
-        return cls.__cursor.fetchall()
+        
+        else:
+            return cls.__cursor.fetchall()
 
     @classmethod
-    def execute_file(cls, file):
-        f = open(file, 'r').read()
-        cls.__cursor.execute(f, multi=True)
-        cls.__bdd.commit()
+    def execute_file(cls, sql_file):
+        # f = open(file, 'r').read()
+        # cls.__cursor.execute(f, multi=True)
+        # cls.__bdd.commit()
+        with open(sql_file, 'r') as sql_file:
+            result_iterator = cls.__cursor.execute(sql_file.read(), multi=True)
+            for res in result_iterator:
+                print("Running query: ", res)  # Will print out a short representation of the query
+                print(f"Affected {res.rowcount} rows" )
+
+            cls.__bdd.commit()  # Remember to commit all your changes!
 
     @classmethod
     def fermer(cls):
@@ -54,7 +66,23 @@ class Connexion:
         cls.__cursor = None
     
     @classmethod
-    def drop_db(cls):
-        query = f"DROP DATABASE IF EXISTS {cls.__database}"
+    def drop_db(cls, database = None):
+        if cls.__database:
+            query = f"DROP DATABASE IF EXISTS {cls.__database}"
+            cls.__cursor.execute(query)
+            cls.__database = None
+            cls.__bdd.commit()
+        elif database:
+            query = f"DROP DATABASE IF EXISTS {database}"
+            cls.__cursor.execute(query)
+            cls.__database = None
+            cls.__bdd.commit()
+        else:
+            print("Erreur : Pas de nom de base de données précisé !")
+
+    @classmethod
+    def import_csv(cls, csv_name, table_cible):
+        query = f"LOAD DATA LOCAL INFILE '{csv_name}' INTO TABLE {table_cible} FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\\n' IGNORE 1 ROWS; "
+
         cls.__cursor.execute(query)
         cls.__bdd.commit()
