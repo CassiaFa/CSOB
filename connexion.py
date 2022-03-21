@@ -86,3 +86,11 @@ class Connexion:
 
         cls.__cursor.execute(query)
         cls.__bdd.commit()
+
+    @classmethod
+    def vente_EU(cls, jeu):
+    
+        cls.__cursor.callproc('vente_EU',[jeu,])
+
+        for i in cls.__cursor.stored_results():
+            print(i.fetchall())
