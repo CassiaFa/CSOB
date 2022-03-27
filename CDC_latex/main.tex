@@ -16,6 +16,10 @@
 % \usepackage{hyperref}
 \usepackage[hidelinks]{hyperref}
 
+% Package for Gantt chart
+\usepackage{pgfgantt}
+\usepackage[babel=true, kerning=true]{microtype}
+
 \begin{document}
 
 %###############################################
@@ -153,5 +157,29 @@ La base de données doit être développer sur MySQL. Les données statistiques 
 \subsection{Contraintes d'ergonomie}
 
 Un jupyter noteboolook sera livré pour l'utilisateur final, lui permettant de déployer automatiquement la base de données sur sont ordinateur.
+
+\newpage
+
+	\begin{figure}
+		
+		\begin{ganttchart}[
+			expand chart=10cm
+			]{1}{8}
+			\gantttitle{2020}{8} \\
+			\gantttitlelist{1,...,8}{1} \\
+			
+			\ganttgroup{Création de la bdd}{2}{3} \\ % elem0
+			\ganttbar{Extraction des données}{3}{3} \\ % elem1
+			\ganttbar{Création de la bdd}{1}{2} \\ % elem2
+			\ganttmilestone{Fin bdd}{3} \\ % elem3
+			
+			\ganttgroup{Analyse des données}{3}{4} \\ % elem4
+			\ganttbar{Statistiques}{3}{4} \\ % elem5
+			\ganttmilestone{Fin 2}{4} % elem6
+			
+		\end{ganttchart}
+		
+		\caption{Diagramme de Gantt}
+	\end{figure}
 
 \end{document}
