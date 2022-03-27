@@ -30,7 +30,9 @@
 %----------------------------------------------------------------------------------------
 \HRule \\[0.4cm]
 \vspace{1cm}
-{ \huge \bfseries Breizhibus : Cahier des charges}\\ % Title of your document
+{ \huge \bfseries Central Statistical Office of Breizhmeiz \\
+\vspace{0.5cm}
+(CSOB)}\\ % Title of your document
 \vspace{1cm}
 \HRule \\[1cm]
  
@@ -47,8 +49,8 @@
 \begin{center}
 \Large \textbf{Auteurs :}\\
 \vspace{0.5cm}
-Franky \textsc{Tanguy} \\
-Hervé \textsc{Poirier}\\
+Sylvia \textsc{Penfeunteun} \\
+Loïc \textsc{Coroller}\\
 Fabio \textsc{Cassiano}
 \end{center}
 \end{minipage}
@@ -76,127 +78,80 @@ Fabio \textsc{Cassiano}
 
 \section{Introduction}
 
-\textbf{Nom du projet :} Breizhibus Online
-
-Breizhibus Online est une application Web, permettant aux usager de consulter les lignes de bus et les arrêts que propose la société. L'application doit également permettre aux employés agréés de mettre à jour les données par le biais d'une connexion dédiée.
+\textbf{Nom du projet :} Macromania Breizh - Analyse Statistique
 
 \subsection{Motivations}
 
 Le motivations qui ont mené à ce projet sont les suivantes :
 
 \begin{itemize}
-    \item Faciliter l'accès aux informations pour les usagers.
-    \item Faciliter la mise à jour des données concernant les lignes et les bus qui y sont associés.
+    \item Créer une base de données pour stocké des informations de vente de jeux.
+    \item Réaliser des analyses statistique.
 \end{itemize}
 
 \subsubsection{Le client}
 
-Breizhibus est une société proposant un service de transport public de voyageurs. La société est composée de plusieurs véhicules de type bus.
+\textit{Macromania Breizh}, est une nouvelle enseigne de vente de jeux vidéo qui a été créée en 2020 dans la région de Bretagne. L’enseigne possède un magasin sur Brest, et souhaite ouvrir de nouveaux magasins dans le reste de la bretagne dans les prochaines années.
 
 \subsubsection{Le problème}
 
-Le client souhaite informatiser la gestion de ses lignes de bus. La société souhaite proposer une application qui :
-\begin{itemize}
-    \item Permette aux usagers de consulter les lignes de bus et les arrêts.
-    \item Permette à ses employés de mettre à jour simplement les données.
-\end{itemize}
+Le client souhaite ouvrir ses premiers magasins en bretagne, et afin d’organiser au mieux l’espace de ces magasins, l’enseigne souhaite mettre en avant les jeux les plus vendus afin d’améliorer ses ventes et attirer de nouveaux clients.
 
 \subsubsection{L'existant}
 
-Un prestataire précédent a informatisé toutes les données sous la forme d'une base MySQL. Mais la mise à jour ne se fait qu'en requête SQL. Cependant personne n'ayant cette compétence en interne, cela oblige le client à passer par le prestataire, qui facture chaque intervention.
+Actuellement l’enseigne met en avant les dernières sorties de jeux sur les plateformes les plus vendues selon des avis d’experts et une comparaison avec la concurrence.
 
 \subsubsection{Le besoin non satisfait}
 
-Il doit être possible pour les employés de Breizhibus de mettre à jour les données de la base sans avoir recours à des requêtes SQL, de manière simple et intuitive.
+Les études effectuées restent approximatives et les chiffres ne permettent pas de représenter objectivement les ventes, puisqu’ on se rend compte  que les jeux vendus ne sont pas forcément ceux prédits.
 
 \subsubsection{Les objectifs}
 
-La mission est de développer l'application web à partir de la base Breizhibus existante.
+Le client dispose des données de vente de nombreux jeux sur la période de 1980 à 2020. Ces données regroupent les ventes pour les 3 plus grands marchés, le marché Nord Américain, le marché Européen, et le Japon, on y retrouve également les autres ventes, ainsi que les ventes global. Le client souhaite organiser ces données dans une base de données. Il souhaite également que quelques statistiques soient réalisées sur le jeu de données, afin de prendre connaissance des plateformes les plus vendeuses.
 
 \subsection{Précisions sur le client}
 
-Le client a précisé certaines contraintes, au niveau de l'interface professionnel : 
-\begin{itemize}
-    \item Un espace de connexion pour les employés agréés, permettant d'ajouter/éditer les bus avec assignation de lignes.
-    \item Un bus ne peut avoir qu'une seule ligne
-    \item Une ligne peut avoir plusieurs bus qui lui sont assignés
-\end{itemize}
-
-Côté utilisateur :
-\begin{itemize}
-    \item Consulter les lignes de bus et les arrêts qu'elles décernent
-    \item Application intuitive, simple, et épurée.
-\end{itemize}
+Le magasin se situe dans la ville de Brest dans le Finistère. Il y a beaucoup de concurrence de proximité, avec des enseignes en concurrence directe car similaires ou de plus grandes enseignes spécialisées.
 
 \subsubsection{Marché}
 
-Le fait de faciliter l'accès aux informations permettra d'avoir plus de visibilité et d'accroître le nombre d'utilisateur.
+Le marché du jeu vidéo est en pleine croissance depuis de nombreuses années.
+L’enjeu commercial est d’optimiser les ventes et réduire le déstockage.
 
 \section{Documentation}
 
 \subsection{Terminologie métier}
 
-La société propose des véhicules de type bus dont les trajets sont considérés comme des lignes, et on retrouve des arrêts le long de ces lignes.
+La société est un magasin de \textbf{jeux vidéo} qui vend des jeux et des accessoire. Les jeux sont éditer par différents \textbf{editeurs} et sont vendus sur différents \textbf{plateformes}.
 
 \subsection{Profil des utilisateurs finaux}
 
-Deux profils d’utilisateurs ont été identifiés :
-\begin{itemize}
-    \item Utilisateurs (grand public) : seuls compétences nécessaires, savoir naviguer sur un site internet.
-    \item Professionnel :  avoir un compte dans la société afin de pouvoir s’identifier,  et être habilité à apporter des modifications sur le réseau de bus.
-\end{itemize}
+Dans ce projet nous avons un seul profil utilisateur final, celui qui souhaite mettre en avant les jeux les plus vendus. Il devra avoir des connaissance en SQL pour pouvoir accèder à une base de données, et pouvoir réaliser des ajouts ou des modifications dans cette base de données.
+
+\subsection{Maintenance}
+
+Aucune maintenance de la part de CSOB n'est prévue pour le moment. Le client devra donc se charger de la maintenance de la base de données.
 
 \section{Fonctions à réaliser}
 
 \subsection{Ce que le système doit faire}
 
-\begin{table}[!htbp]
-\centering
-\begin{tabular}{|l|l|p{0.28\linewidth}|p{0.28\linewidth}|}
-\hline
-\rowcolor[HTML]{D7D7D7} 
-\textbf{Priorité} & \textbf{Fonction}     & \textbf{Description}                                                                                                         & \textbf{Critère de performances}                                                                                                                                                                  \\ \hline
-1                 & Modification de base  & Il doit être possible de modifier, supprimer ou actualiser les bus dans la base de données sans avoir de compétences en SQL. & Une modification/actualisation effective en moins de 1 minute.                                                                                                                                    \\ \hline
-2                 & IHM Professionnel     & Interface graphique (tableau de bord) permettant la manipulation de la base de données.                                      & Un affichage des lignes, des bus, et des arrêts dans un tableau. Un bouton permettant la modification des bus, et un bouton permettant la saisie d’un nouveau bus avec l’attribution d’une ligne. \\ \hline
-3                 & Page d’identification & Une page permettant aux agents agréés de s’identifier pour accéder au tableau de bord.                                       & Des entrées textuels pour le nom d’utilisateur, et le mot de passe. Un bouton permettant la validation.                                                                                           \\ \hline
-4                 & IHM Utilisateur       & Interface graphique pour tous les utilisateurs permettant d’accéder aux informations des bus, des lignes, et des arrêts.     & Une visualisation du réseau de bus général. Une sélection des informations par ligne, bus ou arrêt. Affichage des informations sous forme de tableau.                                             \\ \hline
-\end{tabular}
-\caption{Fonctionnalité de l'application et critère de performances associé.}
-\end{table}
+Le système doit être une base de données qui contient les données de vente de jeux. Il doit permettre de réaliser des analyses statistiques sur les données.
+
+Le jupyter notebook livré contiendra quelques statistiques sur les données de vente de jeux, que le client pour exploiter pour organiser son magasin.
 
 \subsection{Ce que le système ne doit pas faire}
 
-Les employés n’auront pas accès à la création de compte pouvant modifier la base de données. 
-Ils ne pourront pas modifier l’architecture de la base de données:  créer/supprimer des tables.
+Le système ne sera pas gérable par le biais d'un site internet, car aucune interface graphique ne sera livré.
 
 \section{Contraintes du système}
 
-\subsection{Contraintes matérielles}
-
-L'application pourra uniquement être utilisé sur les navigateurs internet suivants :
-\begin{itemize}
-    \item Firefox v. 97.0.0 (64 bits)
-    \item Google Chrome v. 98.0.0 (64 bits)
-\end{itemize}
-
 \subsection{Contraintes logicielles}
 
-L'application doit être compatible avec la base de données MySQL, qui est le système de base de données utilisé par le client.
-
-\subsection{Contraintes fonctionnelles}
-
-Les utilisateurs ne doivent pas avoir accès à l'interface de gestion destinées aux employés.
+La base de données doit être développer sur MySQL. Les données statistiques seront réalisé en Python, sur un jupyter notebook.
 
 \subsection{Contraintes d'ergonomie}
 
-La partie utilisateur doit être simple, intuitive et accessible depuis chez eux. L'interface professionnel doit être sécurisée par le biais d'un connexion, elle doit être rapide et compréhensible pour le métier.
-
-\subsection{Contraintes techniques}
-
-Le produit proposé sera développé en python 3, en utilisant un serveur flask. L’interface du produit sera proposée en html5 et css3, et pourra communiquer avec la base de données MySQL par le programme python.
-
-\subsection{Autres facteurs de qualité exigés par le client}
-
-L'accès à la base de données doit être simplifié en écriture avec des commandes restreintes ne permettant pas de faire de mauvaises manipulations de la part des employés.
+Un jupyter noteboolook sera livré pour l'utilisateur final, lui permettant de déployer automatiquement la base de données sur sont ordinateur.
 
 \end{document}
